@@ -1,0 +1,75 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 100 8% 3%;
+    --foreground: 60 30% 95%;
+
+    --card: 100 10% 6%;
+    --card-foreground: 60 30% 95%;
+
+    --primary: 82 100% 64%;
+    --primary-foreground: 100 30% 5%;
+
+    --secondary: 100 10% 10%;
+    --secondary-foreground: 60 30% 95%;
+
+    --muted: 100 8% 12%;
+    --muted-foreground: 60 10% 65%;
+
+    --accent: 100 10% 10%;
+    --accent-foreground: 60 30% 95%;
+
+    --border: 100 12% 16%;
+    --input: 100 12% 16%;
+    --ring: 82 100% 64%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-saira), system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-brand-text bg-clip-text text-transparent;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(185, 255, 74, 0.15);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(185, 255, 74, 0.3);
+}
+
+::selection {
+  background: rgba(185, 255, 74, 0.3);
+  color: #fff;
+}
